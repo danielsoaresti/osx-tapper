@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tapper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,95 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="retro backgruond03" translatesAutoresizingMaskIntoConstraints="NO" id="bzK-LL-sWG">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hg-gn-7UF" userLabel="btnAcao">
+                                <rect key="frame" x="199" y="28" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="gmd-af-Zf6"/>
+                                    <constraint firstAttribute="height" constant="200" id="h0K-9A-uiw"/>
+                                </constraints>
+                                <state key="normal" image="Contact 150p-3"/>
+                                <connections>
+                                    <action selector="clicar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yIv-nI-c45"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8D-Pi-Q83" userLabel="lbl">
+                                <rect key="frame" x="246" y="228" width="108" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="UKC-CT-6H1"/>
+                                    <constraint firstAttribute="width" constant="108" id="w4o-dS-1zy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Contact 150p-1" translatesAutoresizingMaskIntoConstraints="NO" id="QGQ-PE-w2Q" userLabel="img1">
+                                <rect key="frame" x="150" y="44" width="300" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="7up-CV-XDA"/>
+                                    <constraint firstAttribute="width" constant="300" id="Q9I-R2-MeA"/>
+                                    <constraint firstAttribute="width" secondItem="QGQ-PE-w2Q" secondAttribute="height" multiplier="15:8" id="b35-8n-e5e"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNF-yW-Xn8" userLabel="btnStart">
+                                <rect key="frame" x="202" y="300" width="197" height="178"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="197" id="Y11-Sn-0r8"/>
+                                    <constraint firstAttribute="height" constant="178" id="eNf-XB-9ZH"/>
+                                </constraints>
+                                <state key="normal" image="Contact 150p-2"/>
+                                <connections>
+                                    <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w1d-bb-v9t"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Texto Aqui!" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C6S-Zk-8WX" userLabel="texto">
+                                <rect key="frame" x="215" y="262" width="171" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="MW1-dt-KKT"/>
+                                    <constraint firstAttribute="width" constant="171" id="dow-0P-oCA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bzK-LL-sWG" secondAttribute="bottom" id="0VT-Ve-O7A"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UNF-yW-Xn8" secondAttribute="bottom" constant="122" id="4aK-0K-tYh"/>
+                            <constraint firstItem="2hg-gn-7UF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4d7-i5-OJ3"/>
+                            <constraint firstItem="bzK-LL-sWG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FTd-Qe-yt8"/>
+                            <constraint firstItem="QGQ-PE-w2Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HAr-pS-sEl"/>
+                            <constraint firstItem="bzK-LL-sWG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="He8-1h-kY3"/>
+                            <constraint firstItem="i8D-Pi-Q83" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IAT-At-auJ"/>
+                            <constraint firstAttribute="trailing" secondItem="bzK-LL-sWG" secondAttribute="trailing" id="Ihy-sp-NFZ"/>
+                            <constraint firstItem="i8D-Pi-Q83" firstAttribute="top" secondItem="2hg-gn-7UF" secondAttribute="bottom" id="IpA-PW-ESc"/>
+                            <constraint firstItem="2hg-gn-7UF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Jqz-Qm-zz0"/>
+                            <constraint firstItem="UNF-yW-Xn8" firstAttribute="centerX" secondItem="C6S-Zk-8WX" secondAttribute="centerX" id="WIq-6k-nOl"/>
+                            <constraint firstItem="UNF-yW-Xn8" firstAttribute="top" secondItem="C6S-Zk-8WX" secondAttribute="bottom" constant="8" id="ect-AU-f47"/>
+                            <constraint firstItem="UNF-yW-Xn8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jP3-YF-tbc"/>
+                            <constraint firstItem="QGQ-PE-w2Q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="31" id="nON-aB-vyo"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnAcao" destination="2hg-gn-7UF" id="mXz-so-msp"/>
+                        <outlet property="btnStart" destination="UNF-yW-Xn8" id="pPx-gZ-qbF"/>
+                        <outlet property="img1" destination="QGQ-PE-w2Q" id="Ks1-HW-LEL"/>
+                        <outlet property="lbl" destination="i8D-Pi-Q83" id="0uj-jf-vQz"/>
+                        <outlet property="texto" destination="C6S-Zk-8WX" id="4ko-vs-RXm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="168" y="360"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Contact 150p-1" width="725" height="687"/>
+        <image name="Contact 150p-2" width="727" height="711"/>
+        <image name="Contact 150p-3" width="658" height="653"/>
+        <image name="retro backgruond03" width="1667" height="1667"/>
+    </resources>
 </document>
